@@ -7,6 +7,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: echo "Hello Welcome to GitHub Actions"
-      - run: echo "Lets see the OS details of Custom Runner
+      - run: echo "Lets see the OS details of Custom Runner"
       - run: cat /etc/os-release
       
