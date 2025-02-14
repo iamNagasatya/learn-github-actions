@@ -1,0 +1,12 @@
+name: Testing workflow on Custom Runner
+
+on: push
+
+jobs:
+  init:
+    runs-on: self-hosted
+    steps:
+      - run: echo "Hello Welcome to GitHub Actions"
+      - run: echo "Lets see the OS details of Custom Runner
+      - run: cat /etc/os-release
+      
