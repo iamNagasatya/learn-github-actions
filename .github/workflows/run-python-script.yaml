@@ -11,6 +11,12 @@ jobs:
     name: Install Python packages and run Python script
     runs-on: ubuntu-latest
     steps:
-      - run: pwd && ls -l
       - uses: actions/checkout@v4
-      - run: pwd && ls -l
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          check-latest: true
+      - run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python main.py
