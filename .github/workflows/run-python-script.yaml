@@ -8,6 +8,8 @@ on:
 
 jobs:
   init:
+    permissions:
+      contents: write
     name: Install Python packages and run Python script
     runs-on: ubuntu-latest
     steps:
