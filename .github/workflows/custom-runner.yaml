@@ -1,6 +1,7 @@
 name: Testing workflow on Custom Runner
 
-on: push
+on:
+  workflow_dispatch: # Manually trigger the workflow
 
 jobs:
   init:

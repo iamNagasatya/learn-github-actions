@@ -1,0 +1,16 @@
+name: install python packages and run python script
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch: # Manually trigger the workflow
+
+jobs:
+  init:
+    name: Install Python packages and run Python script
+    runs-on: self-hosted
+    steps:
+      - run: pwd && ls -l
+      - uses: actions/checkout@v4
+      - run: pwd && ls -l
