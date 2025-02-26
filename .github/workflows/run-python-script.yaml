@@ -26,3 +26,8 @@ jobs:
         with:
           name: results
           path: ./scripts/output.txt
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: ./scripts/output.txt
+          body: "making release of output.txt"
+          tag_name: ${{ github.ref_name }}
