@@ -38,6 +38,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: init
     name: Build Docker image and run container
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v4
       - run: docker version
