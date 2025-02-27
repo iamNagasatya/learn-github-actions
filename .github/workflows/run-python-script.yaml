@@ -35,6 +35,8 @@ jobs:
           body: "making release of output.txt"
           tag_name: ${{ github.ref_name }}
   docker:
+    runs-on: ubuntu-latest
+    name: Build Docker image and run container
     steps:
       - run: docker version
       - run: docker image build -t mutual-fund-selector .
