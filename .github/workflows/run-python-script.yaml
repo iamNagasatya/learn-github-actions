@@ -34,3 +34,8 @@ jobs:
           files: ./scripts/output.txt
           body: "making release of output.txt"
           tag_name: ${{ github.ref_name }}
+  docker:
+    steps:
+      - run: docker version
+      - run: docker image build -t mutual-fund-selector .
+      - run: docker container run mutual-fund-selector
