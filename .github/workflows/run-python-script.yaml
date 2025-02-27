@@ -38,6 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Docker image and run container
     steps:
+      - uses: actions/checkout@v4
       - run: docker version
       - run: docker image build -t mutual-fund-selector .
       - run: docker container run mutual-fund-selector
